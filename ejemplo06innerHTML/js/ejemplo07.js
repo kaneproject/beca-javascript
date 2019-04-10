@@ -1,10 +1,11 @@
 function inicializar(){
-    var contenidoDelBody = 
-        '<ul id="mascotas">' +
-          '<li id="perro">Un perro llamado firulais</li>' +
-          '<li id="gato">Un gato llamado fuskas</li>' +
-          '<li id="tigre">Un tigre llamado trigger</li>' +
-        '</ul>';
-    var body = document.body;
-    body.innerHTML = contenidoDelBody;
+    var lista = document.getElementById("lista");
+    var listItem2 = document.createElement("li");
+    var textListItem2 = document.createTextNode(2);
+    listItem2.appendChild(textListItem2);
+    lista.insertBefore(listItem2,lista.children[1]);
+    var listItem4 = document.createElement("li");
+    var textListItem4 = document.createTextNode(4);
+    listItem4.appendChild(textListItem4);
+    lista.replaceChild(listItem4,lista.children[3]);
 }

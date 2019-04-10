@@ -3,23 +3,26 @@
     <head>
         <title>Gestión de películas</title>
         <meta charset="UTF-8"/>
+        <script type="text/javascript" src="js/model/peliculas.js" ></script>
+        <script type="text/javascript" src="js/model/gestorPeliculas.js" ></script>
+        <script type="text/javascript" src="js/controller/controlPeliculas.js" ></script>
     </head>
-    <body>
-        <form action="resultado.html" method="POST">
-            <label for="titulo">Título</label><input name="titulo" type="text" placeholder="Título de la película" required><br/>
-            <label for="director">Director</label><input name="director" type="text" placeholder="Director o directores" required><br/>
-            <label for="codId">Cod-ID</label><input name="codId" type="text" placeholder="AAA-11111-AA" pattern="[a-zA-Z]{3}-[0-9]{5}-[a-zA-Z]{2}" required><br/>
+    <body onload="iniciarPrograma()">
+        <form>
+            <label for="titulo">Título</label><input id="titulo" name="titulo" type="text" placeholder="Título de la película" required><br/>
+            <label for="director">Director</label><input id="director" name="director" type="text" placeholder="Director o directores" required><br/>
+            <label for="codId">Cod-ID</label><input id="codId" name="codId" type="text" placeholder="AAA-11111-AA" pattern="[a-zA-Z]{3}-[0-9]{5}-[a-zA-Z]{2}" required><br/>
             <label for="genero">Género</label>
-            <select name="genero" >
+            <select id="genero" name="genero" >
                     <option value="terror">Terror</option>
                     <option value="comedia">Comedia</option>
                     <option value="thriller">Zriler</option>
             </select><br/>
                     
-            <label for="fechaPublicacion">Fecha de estreno</label><input name="fechaPublicacion" type="date" required><br/>
-            <label for="valoracion" >Valoración</label><input name="valoracion" type="range" min="0" max="10"/>
+            <label for="fechaPublicacion">Fecha de estreno</label><input id="fecha" name="fecha" type="date" required><br/>
+            <label for="valoracion" >Valoración</label><input id="valoracion" name="valoracion" type="range" min="0" max="10"/>
 <br/>
-            <input type="submit" value="Enviar"/>
+            <input type="button" onclick="guardarPeliculaButton()" value="Enviar"/>
         </form>
         <table>
             <thead>
@@ -27,16 +30,8 @@
                     <th>COD-ID</th><th>Título</th><th>Director</th><th>Género</th><th>Fecha de Publicación</th><th>Valoración</th>
                 </tr> 
             </thead>
-
-            <tr>
-                    <td>AAA-11111-AA</td><td>La comunidad del anillo</td><td>J.R.R. Tolkien</td><td>Fantástico</td><td>2001-12-19</td><td>10</td>
-            </tr>
-            <tr>
-                    <td>AAA-11111-BA</td><td>Las dos torres</td><td>J.R.R. Tolkien</td><td>Fantástico</td><td>2002-12-18</td><td>10</td>
-            </tr>
-            <tr>
-                    <td>AAA-11223-BB</td><td>El retorno del Rey</td><td>J.R.R. Tolkien</td><td>Fantástico</td><td>2003-12-17</td><td>10</td>
-            </tr>
+            <tbody id="vistaTablaPeliculas">
+            </tbody>
         </table>
     </body>
 

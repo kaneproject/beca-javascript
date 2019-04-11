@@ -1,9 +1,9 @@
 function iniciarPrograma(){
     gestor = new GestorPeliculas(); 
-    gestor.guardarPelicula({id:"AAA-11111-AA",titulo:"El señor de los arillos 1",director:"Directorcillo",genero:"Algo 1",fecha:new Date(),valoracion:5})
-    gestor.guardarPelicula({id:"AAA-11111-AB",titulo:"El señor de los arillos 2",director:"Directorcillo",genero:"Algo 2",fecha:new Date(),valoracion:6})
-    gestor.guardarPelicula({id:"AAA-11111-AC",titulo:"El señor de los arillos 3",director:"Directorcillo",genero:"Algo 3",fecha:new Date(),valoracion:7})
-    gestor.guardarPelicula({id:"AAA-11111-AD",titulo:"El señor de los arillos 4",director:"Directorcillo",genero:"Algo 4",fecha:new Date(),valoracion:8})
+    //gestor.guardarPelicula({id:"AAA-11111-AA",titulo:"El señor de los arillos 1",director:"Directorcillo",genero:"Algo 1",fecha:new Date(),valoracion:5})
+    //gestor.guardarPelicula({id:"AAA-11111-AB",titulo:"El señor de los arillos 2",director:"Directorcillo",genero:"Algo 2",fecha:new Date(),valoracion:6})
+    //gestor.guardarPelicula({id:"AAA-11111-AC",titulo:"El señor de los arillos 3",director:"Directorcillo",genero:"Algo 3",fecha:new Date(),valoracion:7})
+    //gestor.guardarPelicula({id:"AAA-11111-AD",titulo:"El señor de los arillos 4",director:"Directorcillo",genero:"Algo 4",fecha:new Date(),valoracion:8})
     mostrarPeliculasEnTabla();
     document.addEventListener("keydown", (e) => {
         var codigo = document.getElementById("codId");

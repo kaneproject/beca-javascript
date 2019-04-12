@@ -45,7 +45,7 @@ function guardaUno(){
     var ajax = new XMLHttpRequest();
     ajax.open("POST","http://localhost:8080/peliculas/",true);
     ajax.setRequestHeader(
-        'Content-Type','application/json; charset=utf-8')
+        'Content-Type','application/json;charset=UTF-8')
     ajax.onreadystatechange = function (){
 
         if(ajax.status == 200 && ajax.readyState == 4){
@@ -66,8 +66,8 @@ function guardaUno(){
 }
 function actualizaUno(){
     var ajax = new XMLHttpRequest();
-    ajax.open("POST","http://localhost:8080/peliculas/AAA-11111-AZ",true);
-    ajax.setRequestHeader('Content-type','application/json; charset=utf-8')
+    ajax.open("PUT","http://localhost:8080/peliculas/AAA-11111-AZ",true);
+    ajax.setRequestHeader('Content-Type','application/json;charset=UTF-8')
     ajax.onreadystatechange = function (){
 
         if(ajax.status == 200 && ajax.readyState == 4){

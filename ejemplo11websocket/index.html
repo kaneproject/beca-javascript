@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+
+
+        <label for="usuario">Usuario:</label>
+        <input id="usuario" name="usuario" type="text"/>
+        <input type="button" onclick="conectar()" value="Conectar"/>
+        <br/>
+        <div id="status">No conectado</div>
+        <input type="text" id="mensaje"><input type="button" value="enviar" onclick="enviarMensaje()"/>
+        <br/>
+        <textarea id="mensajes" width="1000" height="1000"></textarea>
+            
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+                <script type="text/javascript" src="js/ejemplo11.js" ></script>
+
+            </body>
+    
+</html>
